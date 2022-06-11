@@ -14,7 +14,7 @@ local moneyFrame = plrGui.MainGUI.MoneyBar.Bar.Frame
 local blockbux = moneyFrame.Blockbux
 local money = moneyFrame.Money
 
-local cd = 10
+local cd = 15
 local cd2 = 15
 local cd3 = 8
 local cd4 = 5
