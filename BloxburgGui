@@ -1,0 +1,122 @@
+-- Grinding edits the Value of the Money... just execute again to have the same money!
+
+local SFX = Instance.new("Sound")
+local endGui = Instance.new("ScreenGui")
+local endScreen = Instance.new("Frame")
+local endText = Instance.new("TextLabel")
+local trollText = Instance.new("TextLabel")
+local textAlert = Instance.new("TextLabel")
+
+local localplr = game:GetService("Players").LocalPlayer
+local plrGui = game:GetService("Players").LocalPlayer.PlayerGui
+
+local moneyFrame = plrGui.MainGUI.MoneyBar.Bar.Frame
+local blockbux = moneyFrame.Blockbux
+local money = moneyFrame.Money
+
+local cd = 69000
+local cd2 = 15
+local cd3 = 8
+local cd4 = 5
+local cd5 = 3
+local cd6 = 7
+
+SFX.Parent = endGui
+SFX.Name = "Punch"
+SFX.Playing = false
+SFX.Looped = false
+SFX.Volume = 1
+SFX.PlaybackSpeed = 1
+SFX.RollOffMaxDistance = 10000
+SFX.RollOffMinDistance = 10
+SFX.SoundId = "rbxassetid://8567196528"
+
+textAlert.Parent = endGui
+textAlert.BackgroundTransparency = 1
+textAlert.Size = UDim2.new(0.23, 0,0.035, 0)
+textAlert.Position = UDim2.new(0, 0,0.882, 0)
+textAlert.Text = "Bloxburg Gui | Money Grabber"
+textAlert.Font = Enum.Font.SourceSansBold
+textAlert.TextColor3 = Color3.fromRGB(255, 255, 255)
+textAlert.TextStrokeTransparency = 0
+textAlert.TextScaled = true
+textAlert.TextWrapped = true
+
+-- Blockbux
+blockbux.Text = "B$ 50 000"
+blockbux.Font = Enum.Font.SourceSansBold
+
+-- Money
+money.Text = "$ 1000000"
+money.Font = Enum.Font.SourceSansBold
+
+wait(cd)
+
+-- Troll
+money.Text = "$ 133821392108"
+money.Font = Enum.Font.SourceSansBold
+blockbux.Text = "B$ 2139218218321"
+blockbux.Font = Enum.Font.SourceSansBold
+wait(.5)
+money.Text = "$ 31238284038204832"
+money.Font = Enum.Font.LuckiestGuy
+blockbux.Text = "B$ 19374616942012341"
+blockbux.Font = Enum.Font.LuckiestGuy
+wait(.5)
+money.Text = "$ ???"
+money.Font = Enum.Font.GothamBold
+blockbux.Text = "B$ ???"
+blockbux.Font = Enum.Font.GothamBold
+
+wait(cd2)
+
+plrGui.MainGUI:Destroy()
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
+
+wait(cd3)
+
+endGui.Name = "BloxburgGui"
+endGui.Parent = plrGui
+endGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+endScreen.Parent = endGui
+endScreen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+endScreen.Size = UDim2.new(1, 0, 1.2, 0)
+endScreen.Position = UDim2.new(0, 0,-0.201, 0)
+endScreen.BorderSizePixel = 0
+
+wait(cd4)
+
+SFX:Play()
+
+endText.Parent = endScreen
+endText.BackgroundTransparency = 1
+endText.Size = UDim2.new(0.779, 0,0.313, 0)
+endText.Position = UDim2.new(0.111, 0,0.356, 0)
+endText.Font = Enum.Font.SourceSansBold
+endText.Text = "TROLLED"
+endText.TextColor3 = Color3.fromRGB(255, 0, 0)
+endText.TextScaled = true
+endText.TextWrapped = true
+endText.Rotation = 5
+
+wait(cd5)
+
+SFX.Volume = .5
+SFX:Play()
+
+trollText.Parent = endScreen
+trollText.BackgroundTransparency = 1
+trollText.Size = UDim2.new(0.09, 0,0.024, 0)
+trollText.Position = UDim2.new(0.452, 0,0.552, 0)
+trollText.Font = Enum.Font.SourceSansBold
+trollText.Text = "bad ending..."
+trollText.TextColor3 = Color3.fromRGB(255, 0, 0)
+trollText.TextScaled = true
+trollText.TextWrapped = true
+trollText.Rotation = 5
+
+wait(cd6)
+
+localplr:Kick("[ TROLLED | bad ending... ]")  
